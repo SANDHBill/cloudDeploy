@@ -12,7 +12,7 @@ mkdir -p /etc/puppet/modules
 puppet="/usr/bin/puppet"
 
 # Check for each of the modules we need. If they're not installed, install them.
-for module in puppetlabs/stdlib puppetlabs/java puppetlabs/tomcat stahnma/epel; do
+for module in puppetlabs/stdlib puppetlabs/java puppetlabs/tomcat jfryman/nginx stahnma/epel; do
     $puppet module list | grep -q $(basename $module)
     if [ $? != 0 ]; then
         $puppet module install $module
