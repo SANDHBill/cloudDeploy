@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check to see that Puppet itself is installed
+# Check to see that Puppet itself is installed - test
 yum list installed puppet &> /dev/null
 if [ $? != 0 ]; then
     yum -y install puppet
